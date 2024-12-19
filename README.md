@@ -1,8 +1,16 @@
-# React + Vite
+# Movie Listing Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieGrid is a modern movie list application built using React (with Vite) that showcases a clean, scalable setup. Designed as a demo project, it leverages React 18 and focuses on simplicity and efficiency. This project serves as a foundation for adding advanced features, including AI-powered features.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Current Features
+- Responsive **Navbar** for easy navigation.
+- **Sidebar** for menu options.
+- A central **Content Area** for displaying data.
+
+
+## Screenshots
+
+### screenshot of the imitial project structure 
+![Screenshot (310)](https://github.com/user-attachments/assets/b45a7b06-4f47-4425-a186-f8377f851203)
+
