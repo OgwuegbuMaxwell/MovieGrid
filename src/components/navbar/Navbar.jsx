@@ -5,6 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Sidebar from '../sidebar/Sidebar';
+import Search from '../search/Search';
 
 const Navbar = () => {
 
@@ -38,7 +39,7 @@ const Navbar = () => {
                         {theme.palette.mode === 'dark' ? <Brightness7/> : <Brightness4/>}
                     </IconButton>
 
-                    {!isMobile && 'search...'}
+                    {!isMobile && <Search/>}
 
                     <div>
                         {!isAuthenticated ? (
@@ -64,7 +65,7 @@ const Navbar = () => {
                         )}
                     </div>
 
-                    {isMobile && 'search...'}
+                    {isMobile && <Search/>}
 
                 </Toolbar>
             </AppBar>
