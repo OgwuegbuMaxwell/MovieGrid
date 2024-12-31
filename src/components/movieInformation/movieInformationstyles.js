@@ -1,7 +1,7 @@
 
 import { Padding } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
-import { borderRadius, display } from "@mui/system";
+import { borderRadius, display, height, width } from "@mui/system";
 
 // const drawerWidth = 240;
 
@@ -70,6 +70,22 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column'
         }
+    },
+
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    video: {
+        width: '50%',
+        height: '50%',
+        [theme.breakpoints.down('sm')]: {
+            width: '90%',
+            height: '90%',
+        }
+
     }
 
 

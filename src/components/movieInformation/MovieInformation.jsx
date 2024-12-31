@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux"
 import { selectGenreOrCategory } from "../../features/currentGenreCategory"
 
 import MovieList from '../movieList/MovieList'
+import { useState } from "react"
  
 
 const MovieInformation = () => {
@@ -20,6 +21,8 @@ const MovieInformation = () => {
   const dispatch = useDispatch();
   const {data: recommendations, isFetching: isRecommendationFetching} = useGetRecommendationMoviesQuery({list:'recommendations', movie_id:id})
   // console.log("Movie Recommendations: ", recommendations)
+
+  const [openModal, setOpenModal] = useState(false);
 
   const isMoveiFavorited = false;
   const isMovieWatchlisted = false;
@@ -130,7 +133,7 @@ const MovieInformation = () => {
                             <Button target="_blank" rel="noopener noreferrer" href={`https://www.imdb.com/title/${data?.imdb_id}`} endIcon={<MovieIcon/>}>
                                 IMDB
                             </Button>
-                            <Button onClick={() => {}} rel="noopener noreferrer" href="#" endIcon={<Theaters/>}>
+                            <Button onClick={() => setOpenModal(true)} rel="noopener noreferrer" href="#" endIcon={<Theaters/>}>
                                 Trailer
                             </Button>
                         </ButtonGroup>
@@ -173,6 +176,32 @@ const MovieInformation = () => {
               <Box>Sorry no movie was found</Box>
               }
         </Box>
+
+
+        <Modal
+          closeAfterTransition
+          className={classes.modal}
+          open={openModal}
+          onClose={() => setOpenModal(false)}
+        >
+
+          {
+            data?.videos?.results?.length > 0 && (
+              <iframe
+                autoPlay 
+                className={classes.video}
+                frameBorder='0'
+                title="Trailer"
+                src={`https://www.youtube.com/embed/${data.videos.results[0].key}`}
+                allow="autoPlay"
+              >
+
+              </iframe>
+            )
+          }
+
+
+        </Modal>
 
 
 
