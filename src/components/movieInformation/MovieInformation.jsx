@@ -2,22 +2,24 @@ import { Modal, Typography, Button, ButtonGroup, Grid, Box, CircularProgress, us
 import { Movie as MovieIcon, Theaters, Language, PlusOne, Favorite, FavoriteBorderOutlined, Remove, ArrowBack, Grade } from "@mui/icons-material"
 
 import { Link, useParams } from "react-router-dom"
-import { useGetMovieDetailQuery } from "../../services/TMDB"
+import { useGetMovieDetailQuery, useGetRecommendationMoviesQuery } from "../../services/TMDB"
 import useStyles from './movieInformationstyles'
 
 import genreIcons from '../../assets/genres';
 import { useDispatch } from "react-redux"
 import { selectGenreOrCategory } from "../../features/currentGenreCategory"
 
+import MovieList from '../movieList/MovieList'
+ 
 
 const MovieInformation = () => {
   const { id } = useParams();
   const {data, isFetching, error} = useGetMovieDetailQuery(id);
   // console.log("Movie Information", data)
-
   const classes = useStyles();
-
   const dispatch = useDispatch();
+  const {data: recommendations, isFetching: isRecommendationFetching} = useGetRecommendationMoviesQuery({list:'recommendations', movie_id:id})
+  // console.log("Movie Recommendations: ", recommendations)
 
   const isMoveiFavorited = false;
   const isMovieWatchlisted = false;
@@ -158,6 +160,19 @@ const MovieInformation = () => {
 
 
         </Grid>
+
+
+        <Box marginTop='5rem' width='100%'>
+              <Typography variant="h4" gutterBottom align="center">
+                  You might also like
+              </Typography>
+
+              {recommendations
+              ? <MovieList  movies={recommendations} numberOfMovies={12}/>
+              :
+              <Box>Sorry no movie was found</Box>
+              }
+        </Box>
 
 
 

@@ -32,7 +32,7 @@ const authSlice = createSlice({
             
 
         
-            console.log(action.payload);
+            // console.log(action.payload);
         }
     }
 

@@ -29,3 +29,8 @@ MovieGrid is a modern movie list application built using React (with Vite) that 
 
 ### Movie Information Page
 ![Screenshot (320)](https://github.com/user-attachments/assets/6cb14c7b-e23b-40f3-b9fe-df39a9e3b6ce)
+
+
+
+### Movie Recommendation Section Added to movie detail page
+![Screenshot (321)](https://github.com/user-attachments/assets/b6a7a5f5-ae03-4a2b-a30a-7781aeac890f)
