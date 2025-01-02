@@ -1,0 +1,20 @@
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Scrollbar track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #cfcfcc; /* Light gray background */
+}
+
+/* Scrollbar thumb (draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: #a5a5a5; /* Medium gray */
+    border-radius: 10px; /* Makes the thumb rounded */
+}
+
+/* Remove text decoration globally */
+* {
+    text-decoration: none;
+}

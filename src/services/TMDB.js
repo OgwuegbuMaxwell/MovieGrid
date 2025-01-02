@@ -80,6 +80,28 @@ export const tmdbApi = createApi({
         getActorMovies: builder.query({
             query: ({id, page}) => `/discover/movie?with_cast=${id}&page=${page}&api_key=${tmdbApiKey}`
         }),
+
+
+
+        // Get User's favorites list
+        getUserFavoriteList: builder.query({
+            query: ({listName, accountId, sessionId, page}) => `/account/${accountId}/${listName}?api_key=${tmdbApiKey}&session_id=${sessionId}&page=${page}`
+        }),
+        // getUserFavoriteList: builder.query({
+        //     query: ({ listName, accountId, sessionId, page }) => {
+        //         // Debugging: Log query parameters
+        //         console.log("getUserFavoriteList Query Parameters:");
+        //         console.log("listName:", listName);
+        //         console.log("accountId:", accountId);
+        //         console.log("sessionId:", sessionId);
+        //         console.log("page:", page);
+        
+        //         // Construct and return the URL
+        //         return `/account/${accountId}/${listName}?api_key=${tmdbApiKey}&session_id=${sessionId}&page=${page}`;
+        //     },
+        // }),
+        
+        
         
 
 
@@ -87,7 +109,14 @@ export const tmdbApi = createApi({
 });
 
 
-export const { useGetMoviesQuery, useGetGenresQuery, useGetMovieDetailQuery, useGetRecommendationMoviesQuery, useGetActorsDetailsQuery, useGetActorMoviesQuery } = tmdbApi;
+export const { useGetMoviesQuery, 
+               useGetGenresQuery, 
+               useGetMovieDetailQuery, 
+               useGetRecommendationMoviesQuery, 
+               useGetActorsDetailsQuery, 
+               useGetActorMoviesQuery,
+               useGetUserFavoriteListQuery
+             } = tmdbApi;
 
 
 

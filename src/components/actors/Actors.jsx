@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useGetActorsDetailsQuery, useGetActorMoviesQuery } from "../../services/TMDB";
 import { useState } from "react";
 import MovieList from "../movieList/MovieList";
+import Pagination from "../pagination/Pagination";
 
 
 
@@ -81,6 +82,8 @@ const Actors = () => {
           </Typography>
 
           {movies && <MovieList movies={movies} numberOfMovies={12}/>}
+
+          <Pagination  currentPage={page} setPage={setPage} totalPages={movies?.total_page}/>
       </Box>
     </>
   )

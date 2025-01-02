@@ -3,6 +3,8 @@ import { Box, CircularProgress, Typography } from "@mui/material";
 import MovieList from "../movieList/MovieList";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import Pagination from "../pagination/Pagination";
+
 
 
 
@@ -41,6 +43,7 @@ const Movies = () => {
   return (
     <div>
       <MovieList movies={data} />
+      <Pagination  currentPage={page} setPage={setPage} totalPages={data.total_page}/>
     </div>
   );
 };
