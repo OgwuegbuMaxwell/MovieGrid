@@ -51,6 +51,10 @@ MovieGrid is a modern movie list application built using React (with Vite) that 
 
 
 
-### Light Mode Implemented
+### dark Mode Implemented
 ![Screenshot (328)](https://github.com/user-attachments/assets/ece4c626-bf70-4f37-b15d-61e38232bb37)
 
+
+
+### Movie Card
+![Screenshot (329)](https://github.com/user-attachments/assets/38b6f8e0-7d86-4eb0-8cee-8a84c0b4b79e)

@@ -8,6 +8,7 @@ import genreIcons from '../../assets/genres'
 
 import { selectGenreOrCategory } from "../../features/currentGenreCategory";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const blueLogo = "https://i.ibb.co/9cV7V32/Movie-Grid-Blue-Cropped.png" 
 const redLogo = "https://i.ibb.co/GJCHFGG/Movie-Grid-Red-Cropped.png"
@@ -31,6 +32,14 @@ const Sidebar = ({setMobileOpen}) => {
     const dispatch = useDispatch();
     const { genreIdOrCategoryName } = useSelector((state) => state.currentGenreOrCategory );
     // console.log(genreIdOrCategoryName)
+
+
+
+    // this will hemlp the side nav link to automatically close when 
+    // when item is selected
+    useEffect(() => {
+        setMobileOpen(false)
+    }, [genreIdOrCategoryName])
 
 
   return (

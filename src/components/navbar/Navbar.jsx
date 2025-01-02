@@ -92,6 +92,7 @@ const Navbar = () => {
                                     <Avatar
                                         style={{width: 30, height:30}}
                                         alt='Profile Image'
+                                        // src={`https://www.themoviedb.org/t/p/w64_and_h64_face${user?.avatar.tmdb?.avatar_path}`}
                                         src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIlCRi_Yvq9yMA61nV7X-pW1W58WW26ToNDr4g7KUDbPkjk4KxEfw1Fq0&s'
                                     />
                             </Button>

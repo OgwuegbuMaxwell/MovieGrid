@@ -4,6 +4,7 @@ import MovieList from "../movieList/MovieList";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import Pagination from "../pagination/Pagination";
+import FeaturedMovie from "../featuredMovie/FeaturedMovie";
 
 
 
@@ -42,6 +43,8 @@ const Movies = () => {
 
   return (
     <div>
+      <FeaturedMovie movie={data.results[0]} />
+
       <MovieList movies={data} />
       <Pagination  currentPage={page} setPage={setPage} totalPages={data.total_page}/>
     </div>
