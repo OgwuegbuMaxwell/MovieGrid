@@ -1,12 +1,56 @@
-# Movie Listing Application
+# MovieGrid
 
-MovieGrid is a modern movie list application built using React (with Vite) that showcases a clean, scalable setup. Designed as a demo project, it leverages React 18 and focuses on simplicity and efficiency. This project serves as a foundation for adding advanced features, including AI-powered features.
+**MovieGrid** is a modern, responsive, and voice-controlled web application that allows users to explore popular, top-rated, and upcoming movies seamlessly. Powered by the TMDB API, MovieGrid offers a user-friendly interface to browse, search, and learn more about movies, view recommendations, and manage a personalized list of favorites and watchlist. With integrated Alan AI voice assistant, users can interact with the application through voice commands, such as toggling dark/light mode, selecting movie categories and genres, searching for movies, and even logging in or out. The app provides dynamic theming and is designed to deliver an engaging movie discovery experience.
+
+![Screenshot (330)](https://github.com/user-attachments/assets/6980083c-6af7-4e39-9227-5d0e2ff5f1f7)
 
 
-## Current Features
-- Responsive **Navbar** for easy navigation.
-- **Sidebar** for menu options.
-- A central **Content Area** for displaying data.
+## Features
+
+### Core Features
+ - Browse Movies by Category: Explore movies categorized as Popular, Top Rated, and Upcoming.
+ - Search Functionality: Search for any movie by its title using the search bar or voice commands.
+ - Detailed Movie Information: View comprehensive details about a movie, including cast, runtime, genres, overview, and IMDb ratings.
+ - Recommendations: Discover movies related to your current selection.
+ - User Authentication: Log in using TMDB accounts to access personalized features.
+ - Favorites and Watchlist Management: Add and remove movies from your favorites and watchlist.
+ - Dynamic Theming: Switch between light and dark mode seamlessly.
+
+### Voice Command Features
+ - 1. Change Themes: Switch between light and dark modes using voice commands.
+     - Example: "Change to dark mode" or "Change to light mode"
+ - 2. Select Movie Category and Genre: Use voice commands to navigate to specific categories or genres.
+     - Example: "Go to popular movies"
+ - 3. Search for Movies: Use voice commands to find movies by title.
+     - Example: "Search for Inception."
+ - 4. User Authentication: Log in and log out using voice commands.
+     - Example: "Log me in" or "Log me out."
+
+
+### Additional Features
+ - Responsive Design: Ensures a great experience across all devices.
+ - Real-time Updates: Favorites and watchlist changes are updated instantly.
+
+
+## Technologies Used
+
+### Frontend
+ - React.js: For building the user interface.
+ - Material-UI (MUI): For responsive and modern components and styling.
+ - Redux Toolkit: For state management and API integration.
+ - Axios: For making HTTP requests to the TMDB API.
+
+
+### Backend
+ - TMDB API: Used as the backend service to fetch movie data, manage authentication, and handle user-specific operations.
+
+
+### Other Technologies
+ - Alan AI: For enabling voice command capabilities.
+ - Vite: For setting up a fast and efficient development environment.
+ - JavaScript ES6+: For dynamic programming and functionalities.
+
+
 
 
 ## Screenshots
